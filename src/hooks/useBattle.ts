@@ -36,7 +36,7 @@ export interface UseBattleReturn {
 // Constants
 // ---------------------------------------------------------------------------
 
-const WS_URL = import.meta.env.VITE_WS_URL as string
+const WS_URL = (import.meta.env.VITE_WS_URL as string).replace(/\/$/, '')
 const MAX_LOG = 8
 const INITIAL_TEAM_SIZE = 81
 

@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react'
 import type { DragEvent, ChangeEvent } from 'react'
 
-const API_URL = import.meta.env.VITE_API_URL as string
+const API_URL = (import.meta.env.VITE_API_URL as string).replace(/\/$/, '')
 
 type UploadStatus = 'idle' | 'uploading' | 'success' | 'error'
 
